@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 height: 200,
                 color: Colors.pink,
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
             ],
           ),
           Column(
@@ -85,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   },
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
             ],
           ),
           Column(
@@ -94,7 +94,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 height: 200,
                 color: Colors.red,
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
+            ],
+          ),
+          Column(
+            children: [
+              Container(
+                height: 200,
+                color: Colors.blue,
+              ),
+              const SizedBox(height: 10),
             ],
           ),
         ],
@@ -107,25 +116,25 @@ Widget customCardWidget(String title, String description) {
   return Card(
       elevation: 4,
       child: Container(
-        height: 100,
-        padding: EdgeInsets.all(10),
+        // height: 100,
+        padding: const EdgeInsets.all(10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Row(
               children: [
-                CircleAvatar(
+                const CircleAvatar(
                   radius: 30,
                   backgroundImage: NetworkImage(
                       'https://api.api-ninjas.com/v1/randomimage?category=nature'),
                 ),
-                SizedBox(width: 16),
+                const SizedBox(width: 16),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(title,
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontSize: 24, fontWeight: FontWeight.bold)),
                     Text(description)
                   ],
@@ -137,7 +146,7 @@ Widget customCardWidget(String title, String description) {
               children: [
                 TextButton(
                   onPressed: () {},
-                  child: Text('GO'),
+                  child: const Text('GO'),
                 )
               ],
             )
